@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Historico</ion-title>
+     <ion-buttons end>
+    <button (click)="createPlaca()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of ListaPlaca | async" (click)="select(item)">
+      <h2>{{item.placa | placapiper | uppercase}}</h2>
+      <p>{{item.tipo | uppercase}}</p>
+
+
+     <ion-icon item-right [name]="item.tipo === 'carro' ? 'car' : item.tipo === 'taxi' ? 'taxi' : item.tipo === 'ônibus' ? 'onibus' : 'none'">
+     </ion-icon>
+
+      <!-- <ion-icon name="car" item-right></ion-icon> !-->
+    </ion-item>
+  </ion-list>
+</ion-content>

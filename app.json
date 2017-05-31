@@ -1,0 +1,7 @@
+   {
+        "name": "MausMotoristas",
+        "description": "Um aplicativo para denunciar motoristas infratores",
+        "repository": "https://github.com/iacapuca/mausmotoristas",
+        "logo": "",
+        "keywords": ["ionic3", "heroku", "iacapuca"]
+    }

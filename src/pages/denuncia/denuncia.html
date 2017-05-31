@@ -1,0 +1,27 @@
+<ion-content padding class="denunciaPage">
+  <div class="home-container">
+    <div class="logo">
+    <img src="assets/img/appicon.png">
+    </div>
+      <ion-item>
+        <ion-input [textMask]="{mask: mask,guide:true}" [(ngModel)]="placaModel" type="text" id="placa" placeholder="Placa" required></ion-input>
+      </ion-item>
+      <ion-item>
+  <ion-label>Tipo de Veiculo</ion-label>
+  <ion-select [(ngModel)]="tipoModel" multiple="false">
+    <ion-option>Taxi</ion-option>
+    <ion-option>Ônibus</ion-option>
+    <ion-option>Motocicleta</ion-option>
+    <ion-option>Carro</ion-option>
+    <ion-option>Caminhão</ion-option>
+  </ion-select>
+</ion-item>
+<div class="bottom-container">
+   <button ion-button large outline block (click)="createPlaca()" id="cta" color="primary">Efetuar Denuncia</button>
+ </div>
+ <ion-item id="lbl">
+    <p>Placa: {{placaModel | uppercase}}</p>
+    <p>Tipo: {{tipoModel}}</p>
+  </ion-item>
+  </div>
+</ion-content>
